@@ -1,3 +1,10 @@
+## Git Collaboration
+what was new to me: working with remote repository, while this course, I had to resolve the isue on hoe to edit the same code from two separate computers (my domestic and one that is at work) Ans now I'm happy to use GitHub for this.
+what surprised me: that git is operated so easily from the console GitBash
+what you intend to use in future: I'd like to send a pull request to one of the projects on GitHub and get it approved.
+<img src="https://github.com/veronikos/kottans-frontend/blob/master/task_git_collaboration/github_collaboration.png">
+
+
 ## Linux CLI, and HTTP
 <img src="https://github.com/veronikos/kottans-frontend/blob/master/task_linux_cli/task_linux_cli.png">
 what was new to me: All about linux, before this lesson I only heard of it and knew that it doesn't have a visual interface, only console.
