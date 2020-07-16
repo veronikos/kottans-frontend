@@ -1,3 +1,13 @@
+## Responsive Web Design
+<ul>
+   <li>what was new to me: Flexbox game is awesome. It was fun to pass it/ I played two times with a pause between games for one week. </li>
+   <li>what surprised me: </li>
+   <li>what you intend to use in future: </li>
+</ul> 
+<img src="https://github.com/veronikos/kottans-frontend/blob/master/task_responsive_web_design/froggy-1.png" width=700px>
+<img src="https://github.com/veronikos/kottans-frontend/blob/master/task_responsive_web_design/gridgarden.png" width=700px>
+
+
 ## Intro to HTML and CSS
 <ul>
    <li>what was new to me: Almost nothing in css html course on Udacity. Just had some fun.</li>
