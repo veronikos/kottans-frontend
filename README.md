@@ -11,7 +11,7 @@
 ## Intro to HTML and CSS
 <ul>
    <li>what was new to me: Almost nothing in css html course on Udacity. Just had some fun.</li>
-   <li>what surprised me: </li>
+   <li>what surprised me: exists tag <pre> that shows all spaces in the text in your code</li>
    <li>what you intend to use in future: I'like to save and use in future the link to <a href="https://www.cssmatic.com/box-shadow">Box-shadow tool</a> And possibly css selectors and other info from here: <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors">(Mozilla developers tools)</a></li>
 </ul> 
 <img src="https://github.com/veronikos/kottans-frontend/blob/master/task_html_css_intro/task_html_css_intro.png">
