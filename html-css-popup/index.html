@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML CSS Popup Menu</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		* {
+			font-family: "Times New Roman", sans-serif;
+		}
+
+		ul {
+			list-style: none;
+			text-align: right;
+			vertical-align: center;	
+			margin-right: 10px;	
+		}
+
+		li {
+			display: inline-block;
+			vertical-align: center;	
+			padding: 10px 10px 10px 20px;
+		}
+		.avatar {
+		    width: 40px; /* width of container */
+		    height: 40px; /* height of container */
+		    object-fit: cover;
+		    border-radius: 50%;
+		    vertical-align: middle;
+		}
+
+		.fa-th {
+			cursor: pointer;
+			padding:4px;
+		}
+
+		.fa-th::hover {
+			border: 1px solid blue;
+			border-radius: 10%;
+		}
+
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>Menu</li>
+			<li>Images</li>
+			<li><a><i class="fa fa-th"></i></a></li>
+			<li><i class="fa fa-bullhorn"></i></li>
+			<li><div class="image"><img class="avatar" src="https://images.unsplash.com/photo-1517800249805-f3d51bd0b07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80" alt="avatar"></div></li>
+		</ul>
+	</nav>
+
+</body>
+</html>
