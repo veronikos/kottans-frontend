@@ -3,14 +3,21 @@
 <head>
 	<title>HTML CSS Popup Menu</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
 	<style>
 		* {
-			font-family: "Times New Roman", sans-serif;
+			font-family: 'Rowdies', cursive;
+			margin: 0;
+			padding: 0;
+		}
+		
+		body {
+			text-align: center;
 		}
 
 		ul {
 			list-style: none;
-			text-align: right;
+			text-align: center;
 			vertical-align: center;	
 			margin-right: 10px;	
 		}
@@ -33,23 +40,121 @@
 			padding:4px;
 		}
 
-		.fa-th::hover {
+		.fa-th:hover {
 			border: 1px solid blue;
 			border-radius: 10%;
 		}
 
+		.popup {
+			text-align: center;
+			width: 450px;
+			border: 1px solid rgba(117,116,117,0.67);
+			display: inline-block;
+			-webkit-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+			-moz-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+			box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+			margin-top: 10px;
+		}
+
+		.popup img {
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+			text-align: center;
+			border: 1px solid #fff;
+		}
+
+		.icon {
+			display: inline-block;
+			padding: 30px 30px 20px 30px;
+			cursor: pointer;
+			margin: 10px 0;
+		} 
+
+		.icon:hover {
+			border: 1px solid #777;
+		}
+
+		button {
+			border-radius: 0;
+			background: rgba(117,116,117,0.67);
+			width: 450px;
+			border: 0;
+			height: 50px;
+			font-size: 1em;
+			cursor: pointer;
+		}
+
+		button:focus {
+			outline: 0;
+		}
+		#hider {
+		    position: absolute;
+		    top: -9999px;
+		    left: -9999px;
+		}
+
+
+#hider:checked + .content {
+    display: block;
+}
+#clickme {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 10px;
+    display: none;
+}
+
 	</style>
 </head>
 <body>
+
+
+<label class="link" for="hider" id="clickme"><i class="fa fa-th"></i></label>
+<input type="checkbox" id="hider">
+
+
+<div class="content">
+	<div class="popup">
+			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+			<figcaption>Calendar</figcaption></div>
+			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+			<figcaption>Calendar</figcaption></div>
+			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+			<figcaption>Calendar</figcaption></div>
+			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+			<figcaption>Calendar</figcaption></div>
+			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+			<figcaption>Calendar</figcaption></div>
+			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+			<figcaption>Calendar</figcaption></div>
+			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+			<figcaption>Calendar</figcaption></div>
+			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+			<figcaption>Calendar</figcaption></div>
+			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+			<figcaption>Calendar</figcaption></div>
+			<button>More</label>
+		</div>
+	</div>
+
 	<nav>
 		<ul>
 			<li>Menu</li>
 			<li>Images</li>
-			<li><a><i class="fa fa-th"></i></a></li>
+			<li>
+				<label class="link" for="hider" id="clickme">
+					<i class="fa fa-th"></i>
+				</label>
+				<input type="checkbox" id="hider">
+			</li>
 			<li><i class="fa fa-bullhorn"></i></li>
 			<li><div class="image"><img class="avatar" src="https://images.unsplash.com/photo-1517800249805-f3d51bd0b07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80" alt="avatar"></div></li>
 		</ul>
 	</nav>
-
+	
 </body>
 </html>
