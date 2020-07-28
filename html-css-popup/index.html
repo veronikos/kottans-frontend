@@ -45,7 +45,7 @@
 			border-radius: 10%;
 		}
 
-		.popup {
+		#popup {
 			text-align: center;
 			width: 450px;
 			border: 1px solid rgba(117,116,117,0.67);
@@ -56,7 +56,7 @@
 			margin-top: 10px;
 		}
 
-		.popup img {
+		#popup img {
 			height: 60px;
 			width: 60px;
 			display: inline-block;
@@ -89,34 +89,83 @@
 			outline: 0;
 		}
 		#hider {
-		    position: absolute;
+		    position: relative;
 		    top: -9999px;
 		    left: -9999px;
 		}
 
 
-#hider:checked + .content {
-    display: block;
-}
-#clickme {
-    text-decoration: underline;
-    cursor: pointer;
-}
+		#hider:checked + .content {
+		    display: block;
+		}
+		#clickme {
+		    text-decoration: underline;
+		    cursor: pointer;
+		}
 
-.content {
-    margin-top: 10px;
-    display: none;
-}
+		.content {
+		    margin-top: 10px;
+		    display: none;
+		    z-index: 100;
+		}
+
+
+		label {
+		  background-color: #ccc;
+		  color: brown;
+		  padding: 15px;
+		  text-decoration: none;
+		  font-size: 16px;
+		  border: 2px solid brown;
+		  border-radius: 5px;
+		  display: block;
+		  width: 200px;
+		  text-align: center;
+		}
+
+		input, label#hide-button,
+		#popup {
+		  display: none;
+		  text-align: center;
+		}
+
+		input#display-toggle:checked ~ label#display-button {
+		  display: none;
+		  text-align: center;
+		}
+
+		input#display-toggle:checked ~ label#hide-button {
+		  display: block;
+		  background-color: #aaa;
+		  color: #333;
+		}
+
+		input#display-toggle:checked ~ #popup {
+		  display: block;
+		}
+
 
 	</style>
 </head>
 <body>
+		<label class="link" for="hider" id="clickme"><i class="fa fa-th"></i></label>
+		<input type="checkbox" id="hider">
 
-
-<label class="link" for="hider" id="clickme"><i class="fa fa-th"></i></label>
-<input type="checkbox" id="hider">
-
-
+	<nav>
+		<ul>
+			<li>Menu</li>
+			<li>Images</li>
+			<li>
+				<label class="link" for="hider" id="clickme">
+					<i class="fa fa-th"></i>
+				</label>
+				<input type="checkbox" id="hider">
+			</li>
+			<li><i class="fa fa-bullhorn"></i></li>
+			<li><div class="image"><img class="avatar" src="https://images.unsplash.com/photo-1517800249805-f3d51bd0b07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80" alt="avatar"></div></li>
+		</ul>
+	</nav>
+	
 <div class="content">
 	<div class="popup">
 			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
@@ -141,20 +190,34 @@
 		</div>
 	</div>
 
-	<nav>
-		<ul>
-			<li>Menu</li>
-			<li>Images</li>
-			<li>
-				<label class="link" for="hider" id="clickme">
-					<i class="fa fa-th"></i>
-				</label>
-				<input type="checkbox" id="hider">
-			</li>
-			<li><i class="fa fa-bullhorn"></i></li>
-			<li><div class="image"><img class="avatar" src="https://images.unsplash.com/photo-1517800249805-f3d51bd0b07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80" alt="avatar"></div></li>
-		</ul>
-	</nav>
-	
+<input id="display-toggle" type=checkbox>
+<label id="display-button" for="display-toggle"><span>Display Content</span></label>
+<label id="hide-button" for="display-toggle"><span>Hide Content</span></label>
+	<!-- <div id="hidden-content"> -->
+  		<div id="popup">
+			<div class="icon">
+				<img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+				<figcaption>Calendar</figcaption>
+				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+				<figcaption>Calendar</figcaption></div>
+				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+				<figcaption>Calendar</figcaption></div>
+				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+				<figcaption>Calendar</figcaption></div>
+				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+				<figcaption>Calendar</figcaption></div>
+				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+				<figcaption>Calendar</figcaption></div>
+				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+				<figcaption>Calendar</figcaption></div>
+				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+				<figcaption>Calendar</figcaption></div>
+				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+				<figcaption>Calendar</figcaption></div>
+				<button>More</label>
+			</div>
+		</div>
+<!-- 	</div> -->
+
 </body>
 </html>
