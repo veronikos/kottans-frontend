@@ -88,39 +88,12 @@
 		button:focus {
 			outline: 0;
 		}
-		#hider {
-		    position: relative;
-		    top: -9999px;
-		    left: -9999px;
-		}
-
-
-		#hider:checked + .content {
-		    display: block;
-		}
-		#clickme {
-		    text-decoration: underline;
-		    cursor: pointer;
-		}
 
 		.content {
 		    margin-top: 10px;
 		    display: none;
 		    z-index: 100;
-		}
-
-
-		label {
-		  background-color: #ccc;
-		  color: brown;
-		  padding: 15px;
-		  text-decoration: none;
-		  font-size: 16px;
-		  border: 2px solid brown;
-		  border-radius: 5px;
-		  display: block;
-		  width: 200px;
-		  text-align: center;
+		    text-align: center;
 		}
 
 		input, label#hide-button,
@@ -136,30 +109,22 @@
 
 		input#display-toggle:checked ~ label#hide-button {
 		  display: block;
-		  background-color: #aaa;
-		  color: #333;
 		}
 
 		input#display-toggle:checked ~ #popup {
-		  display: block;
+		  display: inline-block;
 		}
-
 
 	</style>
 </head>
 <body>
-		<label class="link" for="hider" id="clickme"><i class="fa fa-th"></i></label>
-		<input type="checkbox" id="hider">
 
 	<nav>
 		<ul>
 			<li>Menu</li>
 			<li>Images</li>
 			<li>
-				<label class="link" for="hider" id="clickme">
-					<i class="fa fa-th"></i>
-				</label>
-				<input type="checkbox" id="hider">
+				<i class="fa fa-th"></i>
 			</li>
 			<li><i class="fa fa-bullhorn"></i></li>
 			<li><div class="image"><img class="avatar" src="https://images.unsplash.com/photo-1517800249805-f3d51bd0b07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80" alt="avatar"></div></li>
@@ -189,15 +154,24 @@
 			<button>More</label>
 		</div>
 	</div>
-
-<input id="display-toggle" type=checkbox>
-<label id="display-button" for="display-toggle"><span>Display Content</span></label>
-<label id="hide-button" for="display-toggle"><span>Hide Content</span></label>
-	<!-- <div id="hidden-content"> -->
+			
+			<p>Menu</p>
+			<p>Images</p>
+			<input id="display-toggle" type=checkbox>
+			<label id="display-button" for="display-toggle">
+				<i class="fa fa-th"></i>
+			</label>
+			<label id="hide-button" for="display-toggle">
+				<i class="fa fa-th"></i>
+			</label>
+			<div class="image">
+				<img class="avatar" src="https://images.unsplash.com/photo-1517800249805-f3d51bd0b07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80" alt="avatar">
+			</div>
+			<!-- <div id="hidden-content"> -->
   		<div id="popup">
-			<div class="icon">
+				<div class="icon">
 				<img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-				<figcaption>Calendar</figcaption>
+				<figcaption>Calendar</figcaption></div>
 				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
 				<figcaption>Calendar</figcaption></div>
 				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
@@ -215,7 +189,6 @@
 				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
 				<figcaption>Calendar</figcaption></div>
 				<button>More</label>
-			</div>
 		</div>
 <!-- 	</div> -->
 
