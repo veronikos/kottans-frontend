@@ -1,18 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Popup Itself</title>
+	<title>HTML CSS Popup Menu</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
-	<style type="text/css">
+	<style>
 		* {
 			font-family: 'Rowdies', cursive;
+			margin: 0;
 			padding: 0;
 		}
-
+		
 		body {
 			text-align: center;
 		}
-/*видимая часть попапа (должно появиться после клика по иконке)*/
+
+		ul {
+			list-style: none;
+			text-align: center;
+			vertical-align: center;	
+			margin-right: 10px;	
+		}
+
+		li {
+			display: inline-block;
+			vertical-align: center;	
+			padding: 10px 10px 10px 20px;
+		}
+		.avatar {
+		    width: 40px; /* width of container */
+		    height: 40px; /* height of container */
+		    object-fit: cover;
+		    border-radius: 50%;
+		    vertical-align: middle;
+		}
+
+		.fa-th {
+			cursor: pointer;
+			padding:4px;
+		}
+
+		.fa-th:hover {
+			border: 1px solid blue;
+			border-radius: 10%;
+		}
+
+/*POPUP*/
+#popup-0{
+			display: none;
+		}
+
+
+
+		#popup-0:target {
+			width: 430px;
+			border: 1px solid rgba(117,116,117,0.67);
+			border-radius: 1%;
+			display: inline-block;
+			-webkit-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+			-moz-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+			box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+			margin-top: 10px;
+		}
+
 		#popup {
 			width: 430px;
 			border: 1px solid rgba(117,116,117,0.67);
@@ -22,6 +72,10 @@
 			-moz-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 			box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 			margin-top: 10px;
+		}
+
+		#popup-1 {
+			display: none;	
 		}
 
 		#popup img {
@@ -43,12 +97,6 @@
 			border: 2px solid #84c1fd;
 			border-radius: 5%;
 		}
-
-		
-		#popup-1 {
-			display: none;	
-		}
-
 
 		a {
 			text-decoration: none;
@@ -78,15 +126,12 @@
 			cursor: pointer;
 		}
 
-/*то, что происходит после нажатия кнопки Больше */
-
- /* 1)в контейнере появляется скролл бар справа.*/
 		#popup:target {
 			max-height: 600px;
 			overflow-y: auto;
 			overflow-x: hidden;
 		}
- /* 2) появляются доп опции */
+
 		#popup:target #popup-1{
 			display: block;
 			border-top: 1px solid rgba(117,116,117,0.67);
@@ -98,16 +143,28 @@
 			box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 			margin-top: 10px;
 		}
- /* 3) удаляется кнопка Больше */
+
 		#popup:target #moreButton {
 			display: none;
 		}
 
-
 	</style>
 </head>
 <body>
-			<div id="popup">
+
+	<nav>
+		<ul>
+			<li>Menu</li>
+			<li>Images</li>
+			<li>
+				<a href="#popup-0"><i class="fa fa-th"></i></a>
+			</li>
+			<li><i class="fa fa-bullhorn"></i></li>
+			<li><div class="image"><img class="avatar" src="https://images.unsplash.com/photo-1517800249805-f3d51bd0b07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80" alt="avatar"></div></li>
+		</ul>
+	</nav>
+	<div id="popup-0">
+	<div id="popup">
 				<div class="icon">
 				<img src="https://img.icons8.com/dusk/2x/calendar.png">
 				<figcaption>Calendar</figcaption></div>
@@ -178,5 +235,6 @@
 						<button class="bottomButton"><a href=''>Less</a></button>
 				</div>
 			</div>
+		</div>
 </body>
 </html>

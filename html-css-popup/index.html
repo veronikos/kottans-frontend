@@ -45,10 +45,10 @@
 			border-radius: 10%;
 		}
 
+/*POPUP*/
+
 		#popup {
-			text-align: center;
 			width: 430px;
-			height: 520px;
 			border: 1px solid rgba(117,116,117,0.67);
 			border-radius: 1%;
 			display: inline-block;
@@ -56,7 +56,10 @@
 			-moz-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 			box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 			margin-top: 10px;
-			/*overflow: auto;*/
+		}
+
+		#popup-1 {
+			display: none;	
 		}
 
 		#popup img {
@@ -71,16 +74,21 @@
 			display: inline-block;
 			padding: 30px 30px 20px 30px;
 			cursor: pointer;
-			margin: 10px 0;
+			margin: 10px 1px;
 		} 
 
 		.icon:hover {
-			border: 1px solid #777;
+			border: 2px solid #84c1fd;
 			border-radius: 5%;
 		}
 
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
+
 		button {
-			border-radius: 0;
 			background: rgba(117,116,117,0.67);
 			width: 430px;
 			border: 0;
@@ -93,23 +101,35 @@
 			outline: 0;
 		}
 
-		input, label#hide-button,
-		#popup {
-		  display: none;
-		  text-align: center;
+		.bottomButton{
+			background: #f1f3f5;
+			width: 430px;
+			border: 0;
+			height: 50px;
+			font-size: 1em;
+			cursor: pointer;
 		}
 
-		input#display-toggle:checked ~ label#display-button {
-		  display: none;
-		  text-align: center;
+		#popup:target {
+			max-height: 600px;
+			overflow-y: auto;
+			overflow-x: hidden;
 		}
 
-		input#display-toggle:checked ~ label#hide-button {
-		  display: block;
+		#popup:target #popup-1{
+			display: block;
+			border-top: 1px solid rgba(117,116,117,0.67);
+			text-align: center;
+			width: 430px;
+			display: inline-block;
+			-webkit-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+			-moz-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+			box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+			margin-top: 10px;
 		}
 
-		input#display-toggle:checked ~ #popup {
-		  display: inline-block;
+		#popup:target #moreButton {
+			display: none;
 		}
 
 	</style>
@@ -121,46 +141,82 @@
 			<li>Menu</li>
 			<li>Images</li>
 			<li>
-				<i class="fa fa-th"></i>
+				<a href="#popup"><i class="fa fa-th"></i></a>
 			</li>
 			<li><i class="fa fa-bullhorn"></i></li>
 			<li><div class="image"><img class="avatar" src="https://images.unsplash.com/photo-1517800249805-f3d51bd0b07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80" alt="avatar"></div></li>
 		</ul>
 	</nav>
-
-			<p>Menu</p>
-			<p>Images</p>
-			<input id="display-toggle" type=checkbox>
-			<label id="display-button" for="display-toggle">
-				<i class="fa fa-th"></i>
-			</label>
-			<label id="hide-button" for="display-toggle">
-				<i class="fa fa-th"></i>
-			</label>
-			<div class="image">
-				<img class="avatar" src="https://images.unsplash.com/photo-1517800249805-f3d51bd0b07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80" alt="avatar">
-			</div>
-  		<div id="popup">
+	<div id="popup">
 				<div class="icon">
-				<img src="https://cdn.svgporn.com/logos/google-calendar.svg">
+				<img src="https://img.icons8.com/dusk/2x/calendar.png">
 				<figcaption>Calendar</figcaption></div>
-				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-				<figcaption>Calendar</figcaption></div>
-				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-				<figcaption>Calendar</figcaption></div>
-				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-				<figcaption>Calendar</figcaption></div>
-				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-				<figcaption>Calendar</figcaption></div>
-				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-				<figcaption>Calendar</figcaption></div>
-				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-				<figcaption>Calendar</figcaption></div>
-				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-				<figcaption>Calendar</figcaption></div>
-				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-				<figcaption>Calendar</figcaption></div>
-				<button>More</button>
-		</div>
+				<div class="icon"><img src="https://img.icons8.com/dusk/2x/gmail.png">
+				<figcaption>Mail</figcaption></div>
+				<div class="icon"><img src="https://img.icons8.com/dusk/2x/address-book.png">
+				<figcaption>Contacts</figcaption></div>
+				<div class="icon"><img src="https://img.icons8.com/dusk/2x/region-code.png">
+				<figcaption>Map</figcaption></div>
+				<div class="icon"><img src="https://img.icons8.com/dusk/2x/product-documents.png">
+				<figcaption>Files</figcaption></div>
+				<div class="icon"><img src="https://img.icons8.com/dusk/2x/user-group-man-woman.png">
+				<figcaption>Contacts</figcaption></div>
+				<div class="icon"><img src="https://img.icons8.com/dusk/2x/translation.png">
+				<figcaption>Translate</figcaption></div>
+				<div class="icon"><img src="https://img.icons8.com/dusk/2x/youtube.png">
+				<figcaption>Videos</figcaption></div>
+				<div class="icon"><img src="https://img.icons8.com/dusk/2x/search.png">
+				<figcaption>Search</figcaption></div>
+				<button id="moreButton"><a href="#popup">More</a></button>
+				<div id="popup-1">
+						<div class="icon">
+						<img src="https://img.icons8.com/dusk/2x/ios-photos.png">
+						<figcaption>Photo</figcaption></div>
+						<div class="icon">
+						<img src="https://img.icons8.com/dusk/2x/app-symbol.png">
+						<figcaption>Apps</figcaption></div>
+						<div class="icon">
+							<img src="https://img.icons8.com/dusk/2x/brief.png">
+							<figcaption>Document</figcaption>
+						</div>
+						<div class="icon">
+							<img src="https://img.icons8.com/dusk/2x/telegram-app.png">
+							<figcaption>Chat</figcaption>
+						</div>
+						<div class="icon">
+							<img src="https://img.icons8.com/dusk/2x/training.png">
+							<figcaption>Classroom</figcaption>
+						</div>
+						<div class="icon">
+							<img src="https://img.icons8.com/dusk/2x/rss.png">
+							<figcaption>RSS</figcaption>
+						</div>
+						<div class="icon">
+							<img src="https://img.icons8.com/dusk/2x/wordpress.png">
+							<figcaption>News</figcaption>
+						</div>
+						<div class="icon">
+							<img src="https://img.icons8.com/dusk/2x/statue-of-liberty.png">
+							<figcaption>History</figcaption>
+						</div>
+						<div class="icon">
+							<img src="https://img.icons8.com/dusk/2x/genealogy.png">
+							<figcaption>Genealogy</figcaption>
+						</div>
+						<div class="icon">
+							<img src="https://img.icons8.com/dusk/2x/python.png">
+							<figcaption>Python</figcaption>
+						</div>
+						<div class="icon">
+							<img src="https://img.icons8.com/dusk/2x/homer-simpson.png">
+							<figcaption>Homer</figcaption>
+						</div>
+						<div class="icon">
+							<img src="https://img.icons8.com/dusk/2x/cat-butt.png">
+							<figcaption>Cat</figcaption>
+						</div>
+						<button class="bottomButton"><a href=''>Less</a></button>
+				</div>
+			</div>
 </body>
 </html>

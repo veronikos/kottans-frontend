@@ -12,8 +12,25 @@
 		body {
 			text-align: center;
 		}
+
+/*пробую обернуть попап в еще один див, который будет виден после нажатия на ссылку.*/
+#wrapper {
+	display: none;
+}
+
+#wrapper:target {
+	width: 430px;
+	border: 1px solid rgba(117,116,117,0.67);
+	border-radius: 1%;
+	display: inline-block;
+	-webkit-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+	-moz-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+	box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+	margin-top: 10px;
+}
+
 /*видимая часть попапа (должно появиться после клика по иконке)*/
-		#popup {
+		#popup:target {
 			width: 430px;
 			border: 1px solid rgba(117,116,117,0.67);
 			border-radius: 1%;
@@ -80,14 +97,29 @@
 
 /*то, что происходит после нажатия кнопки Больше */
 
- /* 1)в контейнере появляется скролл бар справа.*/
-		#popup:target {
+/* /* 1)в контейнере появляется скролл бар справа.*/
+		#popup-1:target {
+			width: 430px;
+			border: 1px solid rgba(117,116,117,0.67);
+			border-radius: 1%;
+			display: inline-block;
+			-webkit-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+			-moz-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+			box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
+			margin-top: 10px;
+		}
+
+		#popup-1:target #wrapper{
+			display: block;
+		}
+
+		/*#popup:target {
 			max-height: 600px;
 			overflow-y: auto;
 			overflow-x: hidden;
-		}
+		}*/
  /* 2) появляются доп опции */
-		#popup:target #popup-1{
+		/*#popup:target #popup{
 			display: block;
 			border-top: 1px solid rgba(117,116,117,0.67);
 			text-align: center;
@@ -97,16 +129,18 @@
 			-moz-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 			box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 			margin-top: 10px;
-		}
+		}*/
  /* 3) удаляется кнопка Больше */
-		#popup:target #moreButton {
+		/*#popup:target #moreButton {
 			display: none;
-		}
+		}*/
 
 
 	</style>
 </head>
 <body>
+	<div><a href="#wrapper">Wrapper</a></div>
+	<div id="wrapper">
 			<div id="popup">
 				<div class="icon">
 				<img src="https://img.icons8.com/dusk/2x/calendar.png">
@@ -127,7 +161,7 @@
 				<figcaption>Videos</figcaption></div>
 				<div class="icon"><img src="https://img.icons8.com/dusk/2x/search.png">
 				<figcaption>Search</figcaption></div>
-				<button id="moreButton"><a href="#popup">More</a></button>
+				<button id="moreButton"><a href="#popup-1">More</a></button>
 				<div id="popup-1">
 						<div class="icon">
 						<img src="https://img.icons8.com/dusk/2x/ios-photos.png">
@@ -175,8 +209,9 @@
 							<img src="https://img.icons8.com/dusk/2x/cat-butt.png">
 							<figcaption>Cat</figcaption>
 						</div>
-						<button class="bottomButton"><a href=''>Less</a></button>
+						<button class="bottomButton"><a href='#popup'>Less</a></button>
 				</div>
 			</div>
+		</div>
 </body>
 </html>
