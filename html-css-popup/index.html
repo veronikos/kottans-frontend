@@ -47,13 +47,16 @@
 
 		#popup {
 			text-align: center;
-			width: 450px;
+			width: 430px;
+			height: 520px;
 			border: 1px solid rgba(117,116,117,0.67);
+			border-radius: 1%;
 			display: inline-block;
 			-webkit-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 			-moz-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 			box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 			margin-top: 10px;
+			/*overflow: auto;*/
 		}
 
 		#popup img {
@@ -73,12 +76,13 @@
 
 		.icon:hover {
 			border: 1px solid #777;
+			border-radius: 5%;
 		}
 
 		button {
 			border-radius: 0;
 			background: rgba(117,116,117,0.67);
-			width: 450px;
+			width: 430px;
 			border: 0;
 			height: 50px;
 			font-size: 1em;
@@ -87,13 +91,6 @@
 
 		button:focus {
 			outline: 0;
-		}
-
-		.content {
-		    margin-top: 10px;
-		    display: none;
-		    z-index: 100;
-		    text-align: center;
 		}
 
 		input, label#hide-button,
@@ -130,31 +127,7 @@
 			<li><div class="image"><img class="avatar" src="https://images.unsplash.com/photo-1517800249805-f3d51bd0b07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80" alt="avatar"></div></li>
 		</ul>
 	</nav>
-	
-<div class="content">
-	<div class="popup">
-			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-			<figcaption>Calendar</figcaption></div>
-			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-			<figcaption>Calendar</figcaption></div>
-			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-			<figcaption>Calendar</figcaption></div>
-			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-			<figcaption>Calendar</figcaption></div>
-			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-			<figcaption>Calendar</figcaption></div>
-			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-			<figcaption>Calendar</figcaption></div>
-			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-			<figcaption>Calendar</figcaption></div>
-			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-			<figcaption>Calendar</figcaption></div>
-			<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
-			<figcaption>Calendar</figcaption></div>
-			<button>More</label>
-		</div>
-	</div>
-			
+
 			<p>Menu</p>
 			<p>Images</p>
 			<input id="display-toggle" type=checkbox>
@@ -167,7 +140,6 @@
 			<div class="image">
 				<img class="avatar" src="https://images.unsplash.com/photo-1517800249805-f3d51bd0b07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1332&q=80" alt="avatar">
 			</div>
-			<!-- <div id="hidden-content"> -->
   		<div id="popup">
 				<div class="icon">
 				<img src="https://cdn.svgporn.com/logos/google-calendar.svg">
@@ -188,9 +160,7 @@
 				<figcaption>Calendar</figcaption></div>
 				<div class="icon"><img src="https://cdn.svgporn.com/logos/google-calendar.svg">
 				<figcaption>Calendar</figcaption></div>
-				<button>More</label>
+				<button>More</button>
 		</div>
-<!-- 	</div> -->
-
 </body>
 </html>
