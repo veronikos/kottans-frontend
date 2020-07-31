@@ -10,7 +10,7 @@
 		}
 
 		body {
-			text-align: center;
+			text-align: right;
 		}
 
 /*пробую обернуть попап в еще один див, который будет виден после нажатия на ссылку.*/
@@ -26,7 +26,8 @@
 	-webkit-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 	-moz-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 	box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
-	margin-top: 10px;
+	margin: 30px;
+	text-align: center;
 }
 
 /*видимая часть попапа (должно появиться после клика по иконке)*/
@@ -38,7 +39,24 @@
 			-webkit-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 			-moz-box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
 			box-shadow: -8px 10px 13px -3px rgba(117,116,117,0.67);
-			margin-top: 10px;
+		}
+
+		/*это уголочек для бокса*/
+
+		#popup:before {
+		    content: "";
+		    width: 30px;
+		    height: 30px;
+		    border-top: 1px solid rgba(117,116,117,0.67);
+		    border-right: 1px solid rgba(117,116,117,0.67);
+		    position: absolute;
+		    top: 43px;
+		    right: 130px;
+		    background-color: #fff;
+		    z-index: 0;
+		    -webkit-transform: rotate(-45deg);
+		    -ms-transform: rotate(-45deg);
+		    transform: rotate(-45deg);
 		}
 
 		#popup img {
@@ -47,6 +65,7 @@
 			display: inline-block;
 			text-align: center;
 			border: 1px solid #fff;
+			z-index: 3;
 		}
 
 		.icon {
@@ -54,11 +73,13 @@
 			padding: 30px 30px 20px 30px;
 			cursor: pointer;
 			margin: 10px 1px;
+			z-index: 3;
 		} 
 
 		.icon:hover {
 			border: 2px solid #84c1fd;
 			border-radius: 5%;
+			z-index: 3;
 		}
 
 		
